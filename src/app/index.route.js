@@ -29,13 +29,6 @@
             templateUrl: 'app/views/detail.html'
           });
 
-
-        // .state('submit', {
-        //   url: '/',
-        //   templateUrl: 'app/views/submit.html',
-        //   //controller: 'MainController',
-        //   //controllerAs: 'main'
-        // });
       }
     ]);
 
