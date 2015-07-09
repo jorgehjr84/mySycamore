@@ -4,7 +4,6 @@
  */
 $navbar-inverse-link-color: #5AADBB;
 $icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-
 /**
  *  Do not remove this comments bellow. It's the markers used by wiredep to inject
  *  sass dependencies when defined in the bower.json of your dependencies
@@ -12,7 +11,7 @@ $icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bo
 // bower:scss
 // endbower
 
-.browsehappy {
+/* .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
@@ -25,7 +24,7 @@ $icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bo
   img.pull-right {
     width: 50px;
   }
-}
+} */
 
 /**
  *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject
