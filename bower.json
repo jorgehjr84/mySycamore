@@ -1,5 +1,5 @@
 {
-  "name": "projects",
+  "name": "mySycamore",
   "version": "0.0.0",
   "dependencies": {
     "angular-animate": "~1.4.0",
@@ -23,5 +23,17 @@
   "resolutions": {
     "jquery": "~2.1.4",
     "angular": "~1.4.0"
-  }
+  },
+  "homepage": "https://github.com/jorgehjr84/mySycamore",
+  "authors": [
+    "Jorge Hernandez <jorge_l_hernandez@yahoo.com>"
+  ],
+  "license": "CC0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }

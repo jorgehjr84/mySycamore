@@ -1,5 +1,5 @@
 {
-  "name": "projects",
+  "name": "mysycamore",
   "version": "0.0.0",
   "dependencies": {},
   "scripts": {
@@ -51,5 +51,17 @@
   },
   "engines": {
     "node": ">=0.10.0"
-  }
+  },
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgehjr84/mySycamore.git"
+  },
+  "author": "jorge hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorgehjr84/mySycamore/issues"
+  },
+  "homepage": "https://github.com/jorgehjr84/mySycamore#readme",
+  "description": ""
 }
