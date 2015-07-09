@@ -22,13 +22,15 @@
           })
           .state('submit', {
             url: '/submit',
-            templateUrl: 'app/views/submit.html'
+            templateUrl: 'app/views/submit.html',
+            controller: 'SubmitController',
+            controllerAs: 'submitCtrl'
+
           })
           .state('detail', {
             url: '/detail',
             templateUrl: 'app/views/detail.html'
           });
-
       }
     ]);
 
