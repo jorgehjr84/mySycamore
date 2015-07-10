@@ -1,16 +1,11 @@
 (function() {
   'use strict';
 
-  // angular.module('projects', [])
-  //   .controller('SubmitController', function() {
-  //
-  //
-  //
-  //
-  //   });
-  // angular
-  //   .module('projects')
-  // .controller('SubmitController', SubmitController);
+  angular.module('projects')
+    .controller('SubmitController', function() {
+
+    });
+
 
 
   // ['$firebase', '$scope', '$http'],
