@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('projects')
+    .module('mySycamore')
     .constant('malarkey', malarkey)
     .constant('toastr', toastr)
     .constant('moment', moment);

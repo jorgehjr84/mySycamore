@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('projects')
+    .module('mySycamore')
     .config(config);
 
   /** @ngInject */

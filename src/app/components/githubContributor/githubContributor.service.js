@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('projects')
+    .module('mySycamore')
     .factory('githubContributor', githubContributor);
 
   /** @ngInject */

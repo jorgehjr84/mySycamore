@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('projects')
+    .module('mySycamore')
     .directive('acmeNavbar', acmeNavbar);
 
   /** @ngInject */
@@ -11,7 +11,7 @@
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
       scope: {
-          creationDate: '='
+        creationDate: '='
       },
       controller: NavbarController,
       controllerAs: 'vm',

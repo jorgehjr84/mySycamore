@@ -1,22 +1,21 @@
 (function() {
   'use strict';
 
-  angular.module('projects')
-    .controller('SubmitController', function() {
+  angular.module('mySycamore')
+    .controller('SubmitController', SubmitController);
 
-    });
-
-
-
-  // ['$firebase', '$scope', '$http'],
-  // function($scope, $firebase, $http) {
-  //
-  //   var ref = new Firebase("https://mysycamore.firebaseio.com/");
-  // RestangularProvider.setBaseUrl('https://mysycamore.firebaseio.com/')
-
-  // Restangular.one('test').then(function(test) {
-  //   $scope.test = test;
-  //   console.log(test);
-
-
+  /** @ngInject */
+  function SubmitController($scope, $firebase) {
+    var ref = new Firebase('https: //mysycamore.firebaseio.com')
+      // $scope.relative = $firebase(ref);
+      //
+      // $scope.addRelative = function(e) {
+      //   if (e.keycode != 13) return;
+      //
+      //   $scope.relative.$add({
+      //     name: $scope.name
+      //   });
+      //   $scope.newRelative = "";
+      // }
+  }
 })();
