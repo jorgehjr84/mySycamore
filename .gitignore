@@ -1,2 +1,8 @@
 bower_components
-node_modules
+node_modules/
+coverage/
+.DS_Store
+npm-debug.log
+.idea
+*.iml
+test/tmp

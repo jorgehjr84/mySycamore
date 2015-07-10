@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="projects">
+<html ng-app="mySycamore">
 
 <head>
   <meta charset="utf-8">
@@ -51,7 +51,17 @@
 
   <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
   <!-- inject:js -->
-  <!-- js files will be automatically insert here -->
+  <script src="app/index.module.js"></script>
+  <script src="app/components/webDevTec/webDevTec.service.js"></script>
+  <script src="app/components/navbar/navbar.directive.js"></script>
+  <script src="app/components/githubContributor/githubContributor.service.js"></script>
+  <script src="app/components/malarkey/malarkey.directive.js"></script>
+  <script src="app/main/submit.controller.js"></script>
+  <script src="app/main/main.controller.js"></script>
+  <script src="app/index.run.js"></script>
+  <script src="app/index.route.js"></script>
+  <script src="app/index.constants.js"></script>
+  <script src="app/index.config.js"></script>
   <!-- endinject -->
 
   <!-- inject:partials -->
