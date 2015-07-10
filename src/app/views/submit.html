@@ -1,7 +1,6 @@
-<div ng-controller="">
-  <div class="input-group submit-form row">
-    <div class="col-md-6 col col-md-offset-3">
-      </di>
+<div ng-controller="SubmitController">
+  <div class="col-md-6 col col-md-offset-3">
+    <div class="input-group submit-form row" ng-submit="newRelative">
       <input type="text" class="form-control" placeholder="Name">
       <input type="text" class="form-control" placeholder="Est.">
       <input type="text" class="form-control" placeholder="BirthPlace">
@@ -12,6 +11,8 @@
 
       <button onclick="location.href='#/tree'" class="btn btn-success">Submit</button>
     </div>
-
+    <!-- End of input form -->
   </div>
+  <!-- End of grid -->
+</div>
 </div>
