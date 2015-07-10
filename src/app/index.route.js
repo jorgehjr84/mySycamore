@@ -22,9 +22,7 @@
           })
           .state('submit', {
             url: '/submit',
-            templateUrl: 'app/views/submit.html',
-            controller: 'SubmitController',
-            controllerAs: 'submitCtrl'
+            templateUrl: 'app/views/submit.html'
 
           })
           .state('detail', {
