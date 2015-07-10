@@ -1,3 +1,13 @@
+body{
+  background: url(../images/mySycamore.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  background-size: cover;
+
+  //Got this tip about the background image from
+  //https://css-tricks.com/perfect-full-page-background-image/
+};
 /**
  *  If you want to override some bootstrap variables, you have to change values here.
  *  The list of variables are listed here bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss
