@@ -18,7 +18,9 @@
       })
       .state('tree', {
         url: '/tree',
-        templateUrl: 'app/views/tree.html'
+        templateUrl: 'app/views/tree.html',
+        controller: 'TreeController',
+        controllerAs: 'tree'
       })
       .state('submit', {
         url: '/submit',

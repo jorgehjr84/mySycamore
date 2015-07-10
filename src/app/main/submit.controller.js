@@ -4,7 +4,8 @@
   angular.module('mySycamore')
     .controller('SubmitController', SubmitController);
 
-  function SubmitController() {
+  /** @ngInject */
+  function SubmitController($restangular) {
 
   }
 })();
