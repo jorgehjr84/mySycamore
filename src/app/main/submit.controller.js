@@ -7,15 +7,19 @@
   /** @ngInject */
   function SubmitController($scope, $firebase) {
     var ref = new Firebase('https: //mysycamore.firebaseio.com')
-      // $scope.relative = $firebase(ref);
-      //
-      // $scope.addRelative = function(e) {
-      //   if (e.keycode != 13) return;
-      //
-      //   $scope.relative.$add({
-      //     name: $scope.name
-      //   });
-      //   $scope.newRelative = "";
-      // }
-  }
+    $scope.cards = [];
+    $scope.card = {
+      url: 'https: //mysycamore.firebaseio.com',
+      title: 'mySycamore'
+    };
+    $scope.submitCard = function() {
+      $scope.cards.push($scope.card);
+      $scope.card = {
+        url: 'https: //mysycamore.firebaseio.com',
+        title: 'mySycamore'
+      };
+
+    };
+
+  } //End of Submit Controller
 })();
