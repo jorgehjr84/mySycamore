@@ -29,6 +29,8 @@
     <header ng-include="'app/components/navbar/navbar.html'"></header>
     <div ui-view></div>
   </div>
+
+
   <!-- build:js(src) scripts/vendor.js -->
   <!-- bower:js -->
   <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -52,6 +54,7 @@
   <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
   <!-- inject:js -->
   <script src="app/index.module.js"></script>
+  <script src="app/main/services/card.js"></script>
   <script src="app/components/webDevTec/webDevTec.service.js"></script>
   <script src="app/components/navbar/navbar.directive.js"></script>
   <script src="app/components/malarkey/malarkey.directive.js"></script>
@@ -63,7 +66,6 @@
   <script src="app/index.route.js"></script>
   <script src="app/index.constants.js"></script>
   <script src="app/index.config.js"></script>
-  <script src="app/main/services/card.js"></script>
   <!-- endinject -->
 
   <!-- inject:partials -->
