@@ -5,7 +5,7 @@
     .controller('SubmitController', SubmitController);
 
   /** @ngInject */
-  function SubmitController($scope, Card) {
+  function SubmitController($scope) {
     // var ref = new Firebase('https://mysycamore.firebaseio.com')
     $scope.cards = [];
     $scope.card = {
