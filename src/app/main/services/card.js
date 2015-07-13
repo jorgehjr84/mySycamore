@@ -1,8 +1,13 @@
-'use strict';
+(function() {
+  "use strict";
 
 
-var mySycamore = angular.module('mySycamore');
+  var mySycamore = angular.module('mySycamore');
 
-mySycamore.factory('Card', function($resource) {
-  return $resource('https://mysycamore.firebaseio.com/cards/:id.json');
-});
+  mySycamore.factory('Card', function($resource) {
+
+    return $resource('https://mysycamore.firebaseio.com/cards/:id.json');
+
+  });
+
+})();

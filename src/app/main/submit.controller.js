@@ -5,24 +5,28 @@
     .controller('SubmitController', SubmitController);
 
   /** @ngInject */
-  function SubmitController($scope) {
-    // var ref = new Firebase('https://mysycamore.firebaseio.com')
-    $scope.cards = [];
-    $scope.card = {
-      url: 'https://mysycamore.firebaseio.com',
-      title: 'mySycamore'
-    };
+  function SubmitController($scope, $firebaseArray, FIREBASE_URL) {
+    var ref = new Firebase(FIREBASE_URL);
+    $scope.cards = $firebaseArray(ref);
+
+    //$scope.cards = [];
+    //$scope.card = {
+    //url: 'https://mysycamore.firebaseio.com',
+    //title: 'mySycamore'
+    //};
 
     $scope.submitCard = function() {
-      Card.save($scope.card);
-      $scope.cards.push($scope.card);
-      $scope.card = {
-        url: 'https://mysycamore.firebaseio.com',
-        title: 'mySycamore'
-      };
+      $scope.cards.$add({
+        text: $scope.newMessageText
+      });
+
+      // $scope.card = {
+      //   url: 'https://mysycamore.firebaseio.com',
+      //   title: 'mySycamore'
+      // };
 
       $scope.deleteCard = function(index) {
-        $scope.cards.splice(index, 1);
+        $scope.cards.$remove(index, 1);
       };
 
     };
