@@ -9,25 +9,33 @@
     var ref = new Firebase(FIREBASE_URL);
     $scope.cards = $firebaseArray(ref);
 
-    //$scope.cards = [];
-    //$scope.card = {
-    //url: 'https://mysycamore.firebaseio.com',
-    //title: 'mySycamore'
-    //};
-
     $scope.submitCard = function() {
       $scope.cards.$add({
-        text: $scope.newMessageText
+        name: undefined($scope.newCardName),
+        est: $scope.newCardEst,
+        birthplace: $scope.newCardBirthplace,
+        bio: $scope.newCardBio,
+        phone: $scope.newCardPhone,
+        email: $scope.newCardEmail
       });
 
-      // $scope.card = {
-      //   url: 'https://mysycamore.firebaseio.com',
-      //   title: 'mySycamore'
-      // };
-
-      $scope.deleteCard = function(index) {
-        $scope.cards.$remove(index, 1);
+      function undefined(card) {
+        if (card) {
+          return card;
+        } else {
+          return null;
+        }
       };
+
+      // $scope.change = function(card, nodeName) {
+      //   if (!angular.isDefined(card[nodeName])) {
+      //     card[nodeName] = null;
+      //   }
+      // }
+      //
+      // // $scope.deleteCard = function(index) {
+      // //   $scope.cards.$remove(index, 1);
+      // // };
 
     };
 
