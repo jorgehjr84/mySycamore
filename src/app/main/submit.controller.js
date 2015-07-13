@@ -11,13 +11,19 @@
 
     $scope.submitCard = function() {
       $scope.cards.$add({
-        name: undefined($scope.newCardName),
+        name: $scope.newCardName,
         est: $scope.newCardEst,
         birthplace: $scope.newCardBirthplace,
-        bio: $scope.newCardBio,
-        phone: $scope.newCardPhone,
-        email: $scope.newCardEmail
+        bio: undefined($scope.newCardBio),
+        phone: undefined($scope.newCardPhone),
+        email: undefined($scope.newCardEmail)
       });
+      $scope.newCardName = "";
+      $scope.newCardEst = "";
+      $scope.newCardBirthplace = "";
+      $scope.newCardBio = "";
+      $scope.newCardPhone = "";
+      $scope.newCardEmail = "";
 
       function undefined(card) {
         if (card) {
