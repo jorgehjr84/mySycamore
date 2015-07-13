@@ -1,18 +1,28 @@
 <div ng-controller="SubmitController">
+  <div ng-repeat="card in cards">
+    <a ng-href="{{ card.url }}">{{card.name}}</br>{{card.est}}</a>
+    <a ng-click="deleteCard($index)">delete</a>
+  </div>
+
   <div class="col-md-6 col col-md-offset-3">
     <div class="input-group submit-form row">
-      <input type="text" class="form-control" placeholder="Name">
-      <input type="text" class="form-control" placeholder="Est.">
-      <input type="text" class="form-control" placeholder="BirthPlace">
-      <input type="text" class="form-control" placeholder="Bio">
-      <input type="text" class="form-control" placeholder="Phone Number">
-      <input type="text" class="form-control" placeholder="Email">
-      <input type="text" class="form-control" placeholder="Relation">
-
-      <button onclick="location.href='#/tree'" class="btn btn-success">Submit</button>
+      <form ng-submit="submitCard()">
+        <input type="text" ng-model="newCardName" class="form-control" placeholder="Name">
+        <input type="text" ng-model="newCardEst" class="form-control" placeholder="Est.">
+        <input type="text" ng-model="newCardBirthplace" class="form-control" placeholder="BirthPlace">
+        <input type="text" ng-model="newCardBio" class="form-control" placeholder="Bio">
+        <input type="text" ng-model="newCardPhone" class="form-control" placeholder="Phone">
+        <input type="text" ng-model="newCardEmail" class="form-control" placeholder="Email">
+        <input type="text" ng-model="card.relation" class="form-control" placeholder="Relation">
+        <input type="submit" value="Submit Relative">
+        <!--         <button onclick="location.href='#/tree'" class="btn btn-success">Submit</button>
+ -->
     </div>
+    </form>
     <!-- End of input form -->
   </div>
+  card: {{ card }}
+  <br/> Cards: {{ cards }}
   <!-- End of grid -->
 </div>
 </div>
