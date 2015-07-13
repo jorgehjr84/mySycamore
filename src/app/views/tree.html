@@ -9,8 +9,8 @@
     <div id="row-0"></div>
 
     <!-- Beginning of Card -->
-    <div class="btn-group" dropdown>
-      <button onclick="location.href='#/submit'" type="button" class="btn btn-lg btn-success">Jorge Hernandez</button>
+    <div class="btn-group" dropdown ng-repeat="card in Cards">
+      <button onclick="location.href='#/submit'" type="button" class="btn btn-lg btn-success">{{$scope.newCardName}}</button>
       <button type="button" class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown" dropdown-toggle>
         <span class="caret"></span>
         <span class="sr-only"></span>
