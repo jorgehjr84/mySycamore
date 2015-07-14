@@ -1,8 +1,9 @@
 (function() {
   'use strict';
-
   angular.module('mySycamore')
-    .controller('SubmitController', SubmitController);
+
+  .controller('SubmitController', SubmitController);
+
 
   /** @ngInject */
   function SubmitController($scope, $firebaseArray, FIREBASE_URL) {
@@ -14,9 +15,11 @@
         name: $scope.newCardName,
         est: $scope.newCardEst,
         birthplace: $scope.newCardBirthplace,
-        bio: undefined($scope.newCardBio),
-        phone: undefined($scope.newCardPhone),
-        email: undefined($scope.newCardEmail)
+        bio: emptyValue($scope.newCardBio),
+        phone: emptyValue($scope.newCardPhone),
+        email: emptyValue($scope.newCardEmail),
+        photo: emptyValue($scope.newCardPhoto)
+
       });
       $scope.newCardName = "";
       $scope.newCardEst = "";
@@ -25,13 +28,13 @@
       $scope.newCardPhone = "";
       $scope.newCardEmail = "";
 
-      function undefined(card) {
+      function emptyValue(card) {
         if (card) {
           return card;
         } else {
           return null;
         }
-      };
+      }
 
       // $scope.change = function(card, nodeName) {
       //   if (!angular.isDefined(card[nodeName])) {
