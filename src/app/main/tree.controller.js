@@ -10,7 +10,6 @@
 
     $http.get(FIREBASE_URL + '.json').success(function(data) {
       $scope.cards = data;
-      console.log(data);
     });
 
   }
