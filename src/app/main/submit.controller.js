@@ -16,7 +16,9 @@
         birthplace: $scope.newCardBirthplace,
         bio: undefined($scope.newCardBio),
         phone: undefined($scope.newCardPhone),
-        email: undefined($scope.newCardEmail)
+        email: undefined($scope.newCardEmail),
+        photo: undefined($scope.newCardPhoto)
+
       });
       $scope.newCardName = "";
       $scope.newCardEst = "";
