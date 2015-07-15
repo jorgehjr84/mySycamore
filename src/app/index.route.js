@@ -31,7 +31,9 @@
       })
       .state('detail', {
         url: '/detail',
-        templateUrl: 'app/views/detail.html'
+        templateUrl: 'app/views/detail.html',
+        controller: 'DetailController',
+        controllerAs: 'detail'
       });
   } //End of routeConfig
 

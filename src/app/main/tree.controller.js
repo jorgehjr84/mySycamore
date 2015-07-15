@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('mySycamore')
-    .controller('TreeController', TreeController)
+    .controller('TreeController', TreeController);
 
 
   /** @ngInject */
