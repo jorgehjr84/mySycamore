@@ -33,7 +33,13 @@
         templateUrl: 'app/views/detail.html',
         controller: 'DetailController',
         controllerAs: 'detail'
-      });
+      })
+      .state('edit', {
+        url: '/edit/cards/:card',
+        templateUrl: 'app/views/edit.html',
+        controller: 'editController',
+        controllerAs: 'edit'
+      });;
   } //End of routeConfig
 
 })();

@@ -1,11 +1,17 @@
 <div class="input-group submit-form row">
   <div class="col-md-6 col col-md-offset-4">
-    <input type="text" class="form-control" placeholder="Name" ng-model="card.name"> {{card.name}}
+    <ul>
+      <li>{{card.name}}</li>
+      <li>{{card.est}}</li>
+      <li>{{card.birthplace}}</li>
+      <li>{{card.bio}}</li>
+      <li>{{card.phone}}</li>
+      <li>{{card.email}}</li>
+    </ul>
+    <a class="btn btn-lg btn-success" ui-sref="edit({card: id})">
+      Edit
+    </a>
+    <!-- <button onclick="location.href='#edit/cards/:card'" type="button" class="btn btn-lg btn-success" value="Edit">Edit</button> -->
 
-    <input type="text" class="form-control" placeholder="Est.">
-    <input type="text" class="form-control" placeholder="BirthPlace">
-    <input type="text" class="form-control" placeholder="Bio">
-    <input type="text" class="form-control" placeholder="Phone Number">
-    <input type="text" class="form-control" placeholder="Email">
   </div>
 </div>
