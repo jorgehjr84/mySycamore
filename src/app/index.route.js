@@ -28,8 +28,8 @@
         controllerAs: 'submit'
 
       })
-      .state('detail', {
-        url: '/detail',
+      .state('cardDetail', {
+        url: '/cards/:card',
         templateUrl: 'app/views/detail.html',
         controller: 'DetailController',
         controllerAs: 'detail'
