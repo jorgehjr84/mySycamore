@@ -11,6 +11,7 @@
     <!-- Beginning of Card -->
     <div class="btn-group" dropdown ng-repeat="card in cards">
       <button onclick="location.href='#/detail'" type="button" class="btn btn-lg btn-success">{{card.name}}
+        <a ui-sref="tree.detail"></a>
       </button>
       <button type="button" class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown" dropdown-toggle>
         <span class="caret"></span>

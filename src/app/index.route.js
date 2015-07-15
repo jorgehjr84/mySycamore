@@ -8,7 +8,6 @@
   /** @ngInject */
   function routeConfig($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise('/');
-
     $stateProvider
       .state('home', {
         url: '/',
