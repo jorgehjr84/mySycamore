@@ -1,7 +1,9 @@
 {
   "name": "mysycamore",
-  "version": "0.1.0",
-  "dependencies": {},
+  "version": "0.2.0",
+  "dependencies": {
+    "ng-annotate": "^1.0.1"
+  },
   "scripts": {
     "test": "gulp test"
   },
@@ -58,7 +60,7 @@
     "url": "git+https://github.com/jorgehjr84/mySycamore.git"
   },
   "author": "jorge hernandez",
-  "license": "ISC",
+  "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/jorgehjr84/mySycamore/issues"
   },

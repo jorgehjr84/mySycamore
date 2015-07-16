@@ -2,34 +2,44 @@
   'use strict';
 
   angular
-    .module('projects')
-    .config(['$urlRouterProvider', '$stateProvider',
+    .module('mySycamore')
+    .config(routeConfig);
 
-      /** @ngInject */
-      function routeConfig($urlRouterProvider, $stateProvider) {
-        $urlRouterProvider.otherwise('/');
+  /** @ngInject */
+  function routeConfig($urlRouterProvider, $stateProvider) {
+    $urlRouterProvider.otherwise('/');
+    $stateProvider
+      .state('home', {
+        url: '/',
+        templateUrl: 'app/main/main.html',
+        controller: 'MainController',
+        controllerAs: 'main'
+      })
+      .state('tree', {
+        url: '/tree',
+        templateUrl: 'app/views/tree.html',
+        controller: 'TreeController',
+        controllerAs: 'tree'
+      })
+      .state('submit', {
+        url: '/submit',
+        templateUrl: 'app/views/submit.html',
+        controller: 'SubmitController',
+        controllerAs: 'submit'
 
-        $stateProvider
-          .state('home', {
-            url: '/',
-            templateUrl: 'app/main/main.html',
-            controller: 'MainController',
-            controllerAs: 'main'
-          })
-          .state('tree', {
-            url: '/tree',
-            templateUrl: 'app/views/tree.html'
-          })
-          .state('submit', {
-            url: '/submit',
-            templateUrl: 'app/views/submit.html'
-          })
-          .state('detail', {
-            url: '/detail',
-            templateUrl: 'app/views/detail.html'
-          });
-
-      }
-    ]);
+      })
+      .state('cardDetail', {
+        url: '/cards/:card',
+        templateUrl: 'app/views/detail.html',
+        controller: 'DetailController',
+        controllerAs: 'detail'
+      })
+      .state('edit', {
+        url: '/edit/cards/:card',
+        templateUrl: 'app/views/edit.html',
+        controller: 'editController',
+        controllerAs: 'edit'
+      });
+  } //End of routeConfig
 
 })();

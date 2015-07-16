@@ -1,6 +1,6 @@
 {
   "name": "mySycamore",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {
     "angular-animate": "~1.4.0",
     "angular-cookies": "~1.4.0",
@@ -15,7 +15,9 @@
     "toastr": "~2.1.1",
     "moment": "~2.10.3",
     "animate.css": "~3.3.0",
-    "angular": "~1.4.0"
+    "angular": "~1.4.0",
+    "angularfire": "~1.1.2",
+    "ng-file-upload": "~5.0.9"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.0"

@@ -1,12 +1,12 @@
 (function() {
   'use strict';
 
-  describe('controllers', function(){
+  describe('controllers', function() {
 
-    beforeEach(module('projects'));
+    beforeEach(module('mySycamore'));
 
     it('should define more than 5 awesome things', inject(function($controller) {
-      var vm = $controller('MainController');
+      var vm = $controller('MainController', 'SubmitController');
 
       expect(angular.isArray(vm.awesomeThings)).toBeTruthy();
       expect(vm.awesomeThings.length > 5).toBeTruthy();

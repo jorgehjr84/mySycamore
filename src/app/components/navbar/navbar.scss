@@ -1,10 +1,15 @@
 .container{
+  width: 100%;
   margin:0;
   padding: 0;
-
 .navbar{
-  background-color: #6EDAE2;
+  background-color: #42DFE5;
   width: 100%;
   color: white;
+  opacity: 1;
+  padding-bottom: .5em;
   }
+.welcome_message{
+  text-align: center;
+}
 }
