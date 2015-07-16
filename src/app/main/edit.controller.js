@@ -13,7 +13,7 @@
         $scope.card = response.data;
         // console.log(response);
       });
-    console.log($stateParams)
+    console.log($stateParams);
 
 
   } //End of Edit Controller
