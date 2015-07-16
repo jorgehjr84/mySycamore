@@ -8,7 +8,6 @@
   /** @ngInject */
   function routeConfig($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise('/');
-
     $stateProvider
       .state('home', {
         url: '/',
@@ -29,10 +28,18 @@
         controllerAs: 'submit'
 
       })
-      .state('detail', {
-        url: '/detail',
-        templateUrl: 'app/views/detail.html'
-      });
+      .state('cardDetail', {
+        url: '/cards/:card',
+        templateUrl: 'app/views/detail.html',
+        controller: 'DetailController',
+        controllerAs: 'detail'
+      })
+      .state('edit', {
+        url: '/edit/cards/:card',
+        templateUrl: 'app/views/edit.html',
+        controller: 'editController',
+        controllerAs: 'edit'
+      });;
   } //End of routeConfig
 
 })();

@@ -4,9 +4,8 @@
 
   .controller('SubmitController', SubmitController);
 
-
   /** @ngInject */
-  function SubmitController($scope, $firebaseArray, FIREBASE_URL) {
+  function SubmitController($scope, $firebaseArray, FIREBASE_URL, $firebaseObject, $stateParams) {
     var ref = new Firebase(FIREBASE_URL);
     $scope.cards = $firebaseArray(ref);
 
@@ -35,18 +34,19 @@
           return null;
         }
       }
+    }; //End of Submit Card function
 
-      // $scope.change = function(card, nodeName) {
-      //   if (!angular.isDefined(card[nodeName])) {
-      //     card[nodeName] = null;
-      //   }
-      // }
-      //
-      // // $scope.deleteCard = function(index) {
-      // //   $scope.cards.$remove(index, 1);
-      // // };
+    //$scope.cardDetails = $firebaseObject(ref.child($stateParams.cards));
+    //console.log($scope.cardDetails);
 
-    };
-
+    // $scope.change = function(card, nodeName) {
+    //   if (!angular.isDefined(card[nodeName])) {
+    //     card[nodeName] = null;
+    //   }
+    // }
+    //
+    // // $scope.deleteCard = function(index) {
+    // //   $scope.cards.$remove(index, 1);
+    // // };
   } //End of Submit Controller
 })();

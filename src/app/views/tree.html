@@ -9,8 +9,10 @@
     <div id="row-0"></div>
 
     <!-- Beginning of Card -->
-    <div class="btn-group" dropdown ng-repeat="card in cards">
-      <button onclick="location.href='#/detail'" type="button" class="btn btn-lg btn-success">{{card.name}}</button>
+    <div class="btn-group" dropdown ng-repeat="(id, card) in cards">
+      <a class="btn btn-lg btn-success" ui-sref="cardDetail({card: id})">
+          {{card.name}}
+      </a>
       <button type="button" class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown" dropdown-toggle>
         <span class="caret"></span>
         <span class="sr-only"></span>
@@ -20,6 +22,12 @@
         <li><a href="#/submit">Sibling</a></li>
         <li><a href="#/submit">Spouse</a></li>
         <li><a href="#/submit">Child</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a ui-sref="edit({card: id})">
+                  Edit
+              </a>
+        </li>
+
       </ul>
     </div>
 
