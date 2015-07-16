@@ -1,6 +1,5 @@
 (function() {
   'use strict';
-
   angular.module('mySycamore')
     .controller('editController', editController);
 
@@ -12,8 +11,9 @@
     $http.get('https://mysycamore.firebaseio.com/cards/' + $stateParams.card + '.json')
       .then(function(response) {
         $scope.card = response.data;
-        console.log(response);
+        // console.log(response);
       });
+    console.log($stateParams)
 
 
   } //End of Edit Controller

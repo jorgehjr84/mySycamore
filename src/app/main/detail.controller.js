@@ -11,6 +11,7 @@
     $http.get('https://mysycamore.firebaseio.com/cards/' + $stateParams.card + '.json')
       .then(function(response) {
         $scope.card = response.data;
+        console.log($stateParams);
       });
 
 
