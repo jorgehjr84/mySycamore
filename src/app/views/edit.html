@@ -4,7 +4,10 @@
     <h1>EDIT PAGE</h1>
     <div class="input-group submit-form row">
       <form ng-submit="editCard()">
-        <input type="text" class="form-control" placeholder="Name" ng-model="card.name"> {{card.name}}
+        <li ng-repeat="card in list">
+          <input type="text" ng-model="card.name" ng-change="list.$save(card)">
+        </li>
+        <input type="text" class="form-control" placeholder="Name" ng-model="card.name" ng-change="list.$save(card)"> {{card.name}}
         <input type="text" class="form-control" placeholder="Est." ng-model="card.est">
         <input type="text" class="form-control" placeholder="BirthPlace" ng-model="card.birthplace">
         <input type="text" class="form-control" placeholder="Bio" ng-model="card.bio">

@@ -13,10 +13,12 @@
         $scope.card = response.data;
         // console.log(response);
       });
+    var ref = new Firebase(FIREBASE_URL);
+    $scope.list = $firebaseArray(ref);
 
 
 
-    console.log($stateParams);
+    console.log($scope.list);
 
 
   } //End of Edit Controller
