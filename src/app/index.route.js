@@ -39,7 +39,7 @@
         templateUrl: 'app/views/edit.html',
         controller: 'editController',
         controllerAs: 'edit'
-      });;
+      });
   } //End of routeConfig
 
 })();
