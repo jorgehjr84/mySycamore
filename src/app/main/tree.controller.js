@@ -16,9 +16,11 @@
     //   var itemRef = new Firebase(url + '/' + id);
     //   itemRef.remove();
     // }
+
     $scope.deleteCard = function(card) {
-      var cardRef = new Firebase(FIREBASE_URL + '/' + card);
-      cardRef.$remove();
+      var cardRef = new Firebase(FIREBASE_URL);
+      $scope.deleteCards = $firebaseArray(cardRef);
+      $scope.cards.$remove(card);
       console.log(cardRef);
     };
 
