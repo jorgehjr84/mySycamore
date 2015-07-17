@@ -14,7 +14,7 @@
         // console.log(response);
       });
     var ref = new Firebase(FIREBASE_URL);
-    $scope.list = $firebaseArray(ref);
+    $scope.editCard = $firebaseArray(ref);
 
 
 
