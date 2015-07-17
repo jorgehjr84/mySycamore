@@ -4,17 +4,15 @@
     <h1>EDIT PAGE</h1>
     <div class="input-group submit-form row">
       <form ng-submit="editCard()">
-        <li ng-repeat="card in list">
-          <input type="text" ng-model="card.name" ng-change="list.$save(card)">
-        </li>
-        <input type="text" class="form-control" placeholder="Name" ng-model="card.name" ng-change="list.$save(card)"> {{card.name}}
-        <input type="text" class="form-control" placeholder="Est." ng-model="card.est">
-        <input type="text" class="form-control" placeholder="BirthPlace" ng-model="card.birthplace">
-        <input type="text" class="form-control" placeholder="Bio" ng-model="card.bio">
-        <input type="text" class="form-control" placeholder="Phone Number" ng-model="card.phone">
-        <input type="text" class="form-control" placeholder="Email" ng-model="card.email">
-        <input type="submit" value="Submit Relative" id="submitButton">
-
+        <div ng-repeat="card in list">
+          <input type="text" class="form-control" placeholder="Name" ng-model="card.name" ng-change="list.$save(card)">
+          <input type="text" class="form-control" placeholder="Est." ng-model="card.est" ng-change="list.$save(card)">
+          <input type="text" class="form-control" placeholder="BirthPlace" ng-model="card.birthplace" ng-change="list.$save(card)">
+          <input type="text" class="form-control" placeholder="Bio" ng-model="card.bio" ng-change="list.$save(card)">
+          <input type="text" class="form-control" placeholder="Phone Number" ng-model="card.phone" ng-change="list.$save(card)">
+          <input type="text" class="form-control" placeholder="Email" ng-model="card.email" ng-change="list.$save(card)">
+          <input type="submit" value="Submit Relative" id="submitButton">
+        </div>
       </form>
     </div>
   </div>
