@@ -16,6 +16,7 @@
     //   var itemRef = new Firebase(url + '/' + id);
     //   itemRef.remove();
     // }
+    $scope.toggle = false;
 
     $scope.deleteCard = function(card) {
       var cardRef = new Firebase(FIREBASE_URL);
