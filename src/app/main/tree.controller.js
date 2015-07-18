@@ -12,5 +12,17 @@
       $scope.cards = data;
     });
 
-  }
+    // $scope.deleteItem = function(id) {
+    //   var itemRef = new Firebase(url + '/' + id);
+    //   itemRef.remove();
+    // }
+
+    $scope.deleteCard = function(card) {
+      var cardRef = new Firebase(FIREBASE_URL);
+      $scope.deleteCards = $firebaseArray(cardRef);
+      $scope.cards.$remove(card);
+      console.log(cardRef);
+    };
+
+  } //End of TreeController Function
 })();
