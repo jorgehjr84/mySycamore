@@ -15,6 +15,11 @@ text-align: center;
 
 //Tree View Styling
 #tree-view{
+  .arrows{
+    width: 3em;
+    height: 3em;
+    
+  }
   .toggle_pin{
     width: 1em;
     height: 1em;
@@ -22,7 +27,7 @@ text-align: center;
   }
 
     .position_active{
-      background-color: darkgreen;   
+      background-color: darkgreen;
     }
 
 
