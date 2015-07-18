@@ -36,6 +36,7 @@
       }
     }; //End of Submit Card function
 
+
     //$scope.cardDetails = $firebaseObject(ref.child($stateParams.cards));
     //console.log($scope.cardDetails);
 

@@ -3,20 +3,16 @@
 
 
   <div class="center_content">
-    <div id="row-3"></div>
-    <div id="row-2"></div>
-    <div id="row-1"></div>
-    <div id="row-0"></div>
+
     <!-- Beginning of Card -->
     <div class="btn-group" dropdown ng-repeat="(id, card) in cards">
-      <a class="btn btn-lg btn-success" ui-sref="cardDetail({card: id})">
+      <a class="btn btn-lg btn-success tree_cards" ui-sref="cardDetail({card: id})">
           {{card.name}}
       </a>
       <button type="button" class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown" dropdown-toggle>
-        <span class="caret"></span>
-        <span class="sr-only"></span>
+        <img src="../../images/pin.png" alt="" class="toggle_pin">
       </button>
-      <ul class="dropdown-menu">
+      <!-- <ul class="dropdown-menu">
         <li><a href="#/submit">Parent</a></li>
         <li><a href="#/submit">Sibling</a></li>
         <li><a href="#/submit">Spouse</a></li>
@@ -29,10 +25,13 @@
         <li role="separator" class="divider"></li>
         <li><a href="" ng-click="deleteCards(card)">Delete</a></li>
 
-      </ul>
+      </ul> -->
+
+
     </div>
-
-    <!--End of Card -->
-
-
   </div>
+
+  <!--End of Card -->
+
+
+</div>
