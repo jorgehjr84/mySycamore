@@ -4,7 +4,8 @@ font-family: 'Indie Flower', cursive;
 
 .center_content{
 text-align: center;
-}
+/* position: relative;
+ */}
 
 //NavBar Styling
 #navbar{
@@ -18,18 +19,20 @@ text-align: center;
   .arrows{
     width: 3em;
     height: 3em;
-    
+
   }
+
   .toggle_pin{
     width: 1em;
     height: 1em;
 
   }
 
-    .position_active{
-      background-color: darkgreen;
-    }
+/*     .relativeCards{
+position: absolute;
+left: 90;
 
+} */
 
 }
 
