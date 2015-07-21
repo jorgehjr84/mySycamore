@@ -18,7 +18,8 @@
     //   itemRef.remove();
     // }
     $scope.toggle = false;
-
+    $scope.toggle_child = false;
+    $scope.toggle_parent = false;
 
     $scope.deleteCard = function(card) {
       var cardRef = new Firebase(FIREBASE_URL);
@@ -27,24 +28,6 @@
       console.log(cardRef);
     };
 
-    // var moveCard = document.getElementById('moveCard');
-    // var container = document.getElementById('center_content');
-    //
-    // var cardLeft = 90;
-    //
-    // function positionCards(e) {
-    //   if (e.keycode == 39) {
-    //     left += 2;
-    //     moveCard.style.left = cardLeft + 'px';
-    //   }
-    //   if (e.keycode == 37) {
-    //     left -= 2;
-    //     moveCard.style.left = cardLeft + 'px';
-    //
-    //   }
-    //   // alert(e.keyCode);
-    // }
-    // document.onkeydown = positionCards;
 
   } //End of TreeController Function
 })();

@@ -16,51 +16,36 @@
      -->
 
       <!-- Beginning of Card -->
-      <!--   <div class="row3">
-      <div class="btn-group moveCard" dropdown ng-repeat="(id, card) in cards">
+      <div class="btn-group moveCard" dropdown ng-repeat="(id, card) in cards" ng-class="{'position_grandParent': toggle_grandParent, 'position_parent': toggle_parent,
+    'position_spouse': toggle_spouse, 'position_sibling': toggle_sibling, 'position_child': toggle_child}">
         <a class="btn btn-lg btn-success tree_cards" ui-sref="cardDetail({card: id})">
-        {{card.name}}
-    </a>
-      </div>
-      <div class="row2">
-        <div class="btn-group moveCard" dropdown ng-repeat="(id, card) in cards">
-          <a class="btn btn-lg btn-success tree_cards" ui-sref="cardDetail({card: id})">
-        {{card.name}}
-    </a>
-        </div>
-        <div class="row1">
-          <div class="btn-group moveCard" dropdown ng-repeat="(id, card) in cards">
-            <a class="btn btn-lg btn-success tree_cards" ui-sref="cardDetail({card: id})">
-        {{card.name}}
-    </a>
-          </div> -->
-      <div class="row0">
-        <div class="btn-group moveCard" dropdown ng-repeat="(id, card) in cards">
-          <a class="btn btn-lg btn-success tree_cards" ui-sref="cardDetail({card: id})">
           {{card.name}}
       </a>
-          <button type="button" class="btn btn-lg btn-success dropdown-toggle" ng-click="toggle = !toggle" ng-class="{'position_active': toggle}">
+        <!--     <button type="button" class="btn btn-lg btn-success dropdown-toggle" ng-click="toggle = !toggle">
+      <img src="../../images/pin.png" alt="" class="toggle_pin">
+    </button>
+     -->
+        <!-- Beginning of Dropdown Button -->
+        <button type="button" class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown" dropdown-toggle>
+          <span class="caret"></span>
+          <span class="sr-only"></span>
+        </button>
 
-            <ul class="dropdown-menu">
-              <li><a href="#/submit">Parent</a></li>
-              <li><a href="#/submit">Sibling</a></li>
-              <li><a href="#/submit">Spouse</a></li>
-              <li><a href="#/submit">Child</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a ui-sref="edit({card: id})">
-                          Edit
-                      </a>
-              </li>
-              <li role="separator" class="divider"></li>
-              <li><a href="" ng-click="deleteCards(card)">Delete</a></li>
+        <ul class="dropdown-menu">
+          <li><a href="" ng-click="toggle_grandParent = !toggle">Grand Parents</a></li>
+          <li><a href="" ng-click="toggle_parent = !toggle">Parent</a></li>
+          <li><a href="" ng-click="toggle_sibling = !toggle">Sibling</a></li>
+          <li><a href="" ng-click="toggle_Spouse = !toggle">Spouse</a></li>
+          <li><a href="" ng-click="toggle_child = !toggle">Child</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a ui-sref="edit({card: id})">
+                  Edit
+              </a>
+          </li>
+          <li role="separator" class="divider"></li>
+          <li><a href="" ng-click="deleteCards(card)">Delete</a></li>
 
-            </ul>
-          </button>
-        </div>
-
-
-
-
+        </ul>
 
 
       </div>
