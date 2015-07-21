@@ -18,18 +18,13 @@ position: relative;
 #tree-view{
 
 
-.position_active{
+ .position_grandParent{
   position: absolute;
-  left:20px;
-}
 
-.position_grandParent{
-  position: absolute;
-  bottom: 100px;
 }
 .position_parent{
-  position: absolute;
-  bottom: 50px;
+   position: absolute;
+top: 100px;
 }
 .position_sibling{
   position: absolute;

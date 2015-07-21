@@ -16,8 +16,7 @@
      -->
 
       <!-- Beginning of Card -->
-      <div class="btn-group moveCard" dropdown ng-repeat="(id, card) in cards" ng-class="{'position_grandParent': toggle_grandParent, 'position_parent': toggle_parent,
-    'position_spouse': toggle_spouse, 'position_sibling': toggle_sibling, 'position_child': toggle_child}">
+      <div class="btn-group moveCard" dropdown ng-repeat="(id, card) in cards" ng-class="{'position_grandParent': toggle_grandParent,'position_parent': toggle_parent, 'position_spouse': toggle_spouse, 'position_sibling': toggle_sibling, 'position_child': toggle_child}">
         <a class="btn btn-lg btn-success tree_cards" ui-sref="cardDetail({card: id})">
           {{card.name}}
       </a>
@@ -32,11 +31,11 @@
         </button>
 
         <ul class="dropdown-menu">
-          <li><a href="" ng-click="toggle_grandParent = !toggle">Grand Parents</a></li>
-          <li><a href="" ng-click="toggle_parent = !toggle">Parent</a></li>
-          <li><a href="" ng-click="toggle_sibling = !toggle">Sibling</a></li>
-          <li><a href="" ng-click="toggle_Spouse = !toggle">Spouse</a></li>
-          <li><a href="" ng-click="toggle_child = !toggle">Child</a></li>
+          <li><a href="" ng-click="toggle_grandParent = !toggle_grandParent">Grand Parent</a></li>
+          <li><a href="" ng-click="toggle_parent = !toggle_parent">Parent</a></li>
+          <li><a href="" ng-click="toggle_sibling = !toggle_sibling">Sibling</a></li>
+          <li><a href="" ng-click="toggle_spouse = !toggle_spouse">Spouse</a></li>
+          <li><a href="" ng-click="toggle_child = !toggle_child">Child</a></li>
           <li role="separator" class="divider"></li>
           <li><a ui-sref="edit({card: id})">
                   Edit

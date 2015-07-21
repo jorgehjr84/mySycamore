@@ -18,8 +18,11 @@
     //   itemRef.remove();
     // }
     $scope.toggle = false;
-    $scope.toggle_child = false;
+    $scope.toggle_grandParent = false;
     $scope.toggle_parent = false;
+    $scope.toggle_spouse = false;
+    $scope.toggle_sibling = false;
+    $scope.toggle_child = false;
 
     $scope.deleteCard = function(card) {
       var cardRef = new Firebase(FIREBASE_URL);
