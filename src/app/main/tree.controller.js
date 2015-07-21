@@ -26,7 +26,10 @@
     };
 
 
-
+    $scope.sortableOptions = {
+      update: function(e, ui) {},
+      axis: 'x'
+    };
 
 
 

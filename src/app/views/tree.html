@@ -18,7 +18,7 @@
 
 
       <!-- Beginning of Card -->
-      <ul ui-sortable ng-model="newCardName">
+      <ul ui-sortable="sortableOptions" ng-model="cards">
         <div class="btn-group tree_cards " dropdown ng-repeat="(id, card) in cards">
           <a class="btn btn-lg btn-success ">
           {{card.name}}
