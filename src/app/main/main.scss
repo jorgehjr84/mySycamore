@@ -14,25 +14,44 @@ font-family: 'Indie Flower', cursive;
 //Tree View Styling
 #tree-view{
   .center_content{
-  text-align: center;
+  }
+/*   .position_grandParent{
+  margin-left: 17em;
+  background-color: darkgrey;
+  width: 60%;
+  display: inline-block;
 }
-  .tree_cards{
-  top: 13em;
-  position: relative;
+.position_parent{
+  margin-left: 17em;
+  background-color: white;
+  width: 60%;
+}
+.home{
+  margin-left: 17em;
+  background-color: darkgrey;
+  width: 60%;
+}
+.child{
+  margin-left: 17em;
+  background-color: white;
+  width: 60%;
+}
+} */
+/*   .tree_cards{
+top: 13em;
+text-align: center;
 
 }
-  .position_grandParent{
-  position: relative;
-  top: 3em;
-  left:25em;
-  float:left;
+ .position_grandParent{
+top: 3em;
+text-align: center;
+
 }
 
-  .position_parent{
-    position: relative;
-    top: 8em;
-    left:25em;
-    float:left;
+ .position_parent{
+top: 8em;
+text-align: center;
+
 }
 
  .position_sibling{
@@ -42,13 +61,10 @@ font-family: 'Indie Flower', cursive;
 
  }
  .position_child{
-   position: relative;
-   top: 18em;
-   left:25em;
-   float:left;
+ top: 18em;
+ text-align: center;
  }
-}
-
+} */
 
   //Detail View Styling
   #detail_view{
