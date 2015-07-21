@@ -2,10 +2,7 @@ body{
 font-family: 'Indie Flower', cursive;
 }
 
-.center_content{
-text-align: center;
-position: relative;
- }
+
 
 //NavBar Styling
 #navbar{
@@ -16,32 +13,38 @@ position: relative;
 
 //Tree View Styling
 #tree-view{
-
-
- .position_grandParent{
-  position: absolute;
+  .center_content{
+  text-align: center;
+}
+  .tree_cards{
+  top: 13em;
+  position: relative;
 
 }
-.position_parent{
+  .position_grandParent{
+  position: absolute;
+  left: 25em;
+  top: 10em;
+}
+
+  .position_parent{
    position: absolute;
-top: 100px;
+   left: 25em;
+   top: 15em;
 }
-.position_sibling{
+
+ .position_sibling{
+
+ }
+ .position_spouse{
+
+ }
+ .position_child{
   position: absolute;
-  right: 80px;
+left: 25em;
+  top: 25em;
+ }
 }
-.position_spouse{
-position: absolute;
-left: 40px;
-
-}
-.position_child{
-  position: absolute;
-  top:300px;
-  right: 150px;
-}
-
-
 
 
   //Detail View Styling
