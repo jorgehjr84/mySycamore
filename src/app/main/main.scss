@@ -22,15 +22,17 @@ font-family: 'Indie Flower', cursive;
 
 }
   .position_grandParent{
-  position: absolute;
-  left: 25em;
-  top: 10em;
+  position: relative;
+  top: 3em;
+  left:25em;
+  float:left;
 }
 
   .position_parent{
-   position: absolute;
-   left: 25em;
-   top: 15em;
+    position: relative;
+    top: 8em;
+    left:25em;
+    float:left;
 }
 
  .position_sibling{
@@ -40,9 +42,10 @@ font-family: 'Indie Flower', cursive;
 
  }
  .position_child{
-  position: absolute;
-left: 25em;
-  top: 25em;
+   position: relative;
+   top: 18em;
+   left:25em;
+   float:left;
  }
 }
 
