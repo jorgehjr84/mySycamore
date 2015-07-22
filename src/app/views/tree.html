@@ -4,22 +4,13 @@
 
   <div class="center_content">
 
-    <ul id="sort-nav">
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-      <li>Item 4</li>
-      <li>Item 5</li>
-    </ul>
+
     <div class="position_grandParent">
-
-
-
 
 
       <!-- Beginning of Card -->
       <ul ui-sortable="sortableOptions" ng-model="cards">
-        <div class="btn-group tree_cards " dropdown ng-repeat="(id, card) in cards">
+        <li class="btn-group tree_cards " dropdown ng-repeat="(id, card) in cards">
           <a class="btn btn-lg btn-success ">
           {{card.name}}
       </a>
@@ -30,9 +21,10 @@
             <span class="caret"></span>
             <span class="sr-only"></span>
           </a>
+        </li>
       </ul>
       Grand Parent DIV</div>
-      <!-- <ul class="dropdown-menu">
+    <!-- <ul class="dropdown-menu">
       <li><a href="" ng-click="toggle_grandParent = !toggle_grandParent">Grand Parent</a></li>
       <li><a href="" ng-click="toggle_parent = !toggle_parent">Parent</a></li>
       <li><a href="" ng-click="toggle_sibling = !toggle_sibling">Sibling</a></li>
@@ -41,13 +33,13 @@
       <li role="separator" class="divider"></li>
       <li><a href="" ng-click="deleteCard(id)">Delete</a></li>
     </ul> -->
-      <!-- End of Dropdown Menu -->
-
-    </div>
-    <!-- End of card and dropdown -->
+    <!-- End of Dropdown Menu -->
 
   </div>
-  <!--End of Center Content -->
+  <!-- End of card and dropdown -->
+
+</div>
+<!--End of Center Content -->
 
 
 </div>
