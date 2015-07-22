@@ -2,9 +2,7 @@ body{
 font-family: 'Indie Flower', cursive;
 }
 
-.center_content{
-text-align: center;
-}
+
 
 //NavBar Styling
 #navbar{
@@ -15,18 +13,59 @@ text-align: center;
 
 //Tree View Styling
 #tree-view{
-  .toggle_pin{
-    width: 1em;
-    height: 1em;
-
+  .center_content{
   }
 
-    .position_active{
-      background-color: darkgreen;   
-    }
-
+/*   .position_grandParent{
+  margin-left: 17em;
+  background-color: darkgrey;
+  width: 60%;
+  display: inline-block;
+}
+.position_parent{
+  margin-left: 17em;
+  background-color: white;
+  width: 60%;
+}
+.home{
+  margin-left: 17em;
+  background-color: darkgrey;
+  width: 60%;
+}
+.child{
+  margin-left: 17em;
+  background-color: white;
+  width: 60%;
+}
+} */
+/*   .tree_cards{
+top: 13em;
+text-align: center;
 
 }
+ .position_grandParent{
+top: 3em;
+text-align: center;
+
+}
+
+ .position_parent{
+top: 8em;
+text-align: center;
+
+}
+
+ .position_sibling{
+
+ }
+ .position_spouse{
+
+ }
+ .position_child{
+ top: 18em;
+ text-align: center;
+ }
+} */
 
   //Detail View Styling
   #detail_view{
