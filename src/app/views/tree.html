@@ -5,9 +5,11 @@
   <div class="center_content">
 
 
-    <div class="position_grandParent">
 
 
+    <div id="row2" class="col-md-3">Row 2</div>
+    <div id="row1" class="col-md-3">Row 1</div>
+    <div id="row0" class="col-md-10">
       <!-- Beginning of Card -->
       <ul ui-sortable="sortableOptions" ng-model="cards">
         <li class="btn-group tree_cards " dropdown ng-repeat="(id, card) in cards">
@@ -17,13 +19,12 @@
           <!-- ui-sref="cardDetail({card: id})" -->
           <!-- End of Card -->
           <!-- Beginning of Dropdown Button -->
-          <a href="" type="button" class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown" dropdown-toggle>
-            <span class="caret"></span>
-            <span class="sr-only"></span>
-          </a>
+          <a class="btn btn-lg btn-success" ui-sref="cardDetail({card: id})">
+V      </a>
         </li>
       </ul>
-      Grand Parent DIV</div>
+      Row 0</div>
+
     <!-- <ul class="dropdown-menu">
       <li><a href="" ng-click="toggle_grandParent = !toggle_grandParent">Grand Parent</a></li>
       <li><a href="" ng-click="toggle_parent = !toggle_parent">Parent</a></li>
