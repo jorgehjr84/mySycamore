@@ -5,7 +5,7 @@
   .controller('SubmitController', SubmitController);
 
   /** @ngInject */
-  function SubmitController($scope, $firebaseArray, FIREBASE_URL, $firebaseObject, $stateParams) {
+  function SubmitController($scope, $firebaseArray, FIREBASE_URL, $firebaseObject, $stateParams, $http) {
     var ref = new Firebase(FIREBASE_URL);
     $scope.cards = $firebaseArray(ref);
 
@@ -38,6 +38,11 @@
     }; //End of Submit Card function
 
 
+    $http.get('https://mysycamore.firebaseio.com/cards/' + $stateParams.relationCard + '.json')
+      .then(function(response) {
+        $scope.relationCard = response.data;
+        console.log(response);
+      });
     //$scope.cardDetails = $firebaseObject(ref.child($stateParams.cards));
     //console.log($scope.cardDetails);
 

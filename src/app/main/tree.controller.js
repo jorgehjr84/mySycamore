@@ -8,13 +8,13 @@
   /** @ngInject */
   function TreeController($scope, $http, $firebaseArray, FIREBASE_URL, $stateParams, $firebaseObject) {
 
+    //
+    // var cardsRef = new Firebase(FIREBASE_URL);
+    // $scope.cards = $firebaseArray(cardsRef);
 
-    var cardsRef = new Firebase(FIREBASE_URL);
-    $scope.cards = $firebaseArray(cardsRef);
-
-    //  $http.get(FIREBASE_URL + '.json').success(function(data) {
-    //    $scope.cards = data;
-    //  });
+    $http.get(FIREBASE_URL + '.json').success(function(data) {
+      $scope.cards = data;
+    });
 
     // $scope.toggle = false;
     // $scope.toggle_grandParent = false;
