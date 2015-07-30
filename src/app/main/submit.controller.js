@@ -17,7 +17,8 @@
         bio: emptyValue($scope.newCardBio),
         phone: emptyValue($scope.newCardPhone),
         email: emptyValue($scope.newCardEmail),
-        photo: emptyValue($scope.newCardPhoto)
+        photo: emptyValue($scope.newCardPhoto),
+        spouseOf: $stateParams.card
 
       });
       $scope.newCardName = "";
@@ -37,21 +38,15 @@
 
     }; //End of Submit Card function
 
-
-    $http.get('https://mysycamore.firebaseio.com/cards/' + $stateParams.relationCard + '.json')
-      .then(function(response) {
-        $scope.relationCard = response.data;
-        console.log(response);
-      });
-    //$scope.cardDetails = $firebaseObject(ref.child($stateParams.cards));
-    //console.log($scope.cardDetails);
-
-    // $scope.change = function(card, nodeName) {
-    //   if (!angular.isDefined(card[nodeName])) {
-    //     card[nodeName] = null;
-    //   }
+    // function spouseOf() {
+    //   $http.get('https://mysycamore.firebaseio.com/cards/' + $stateParams.relationCard + '.json')
+    //     .then(function(response) {
+    //       $scope.relationCard = response.data;
+    //       console.log(response.data);
+    //     });
     // }
-    //
+
+
     // // $scope.deleteCard = function(index) {
     // //   $scope.cards.$remove(index, 1);
     // // };
