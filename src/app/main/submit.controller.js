@@ -18,8 +18,8 @@
         phone: emptyValue($scope.newCardPhone),
         email: emptyValue($scope.newCardEmail),
         photo: emptyValue($scope.newCardPhoto),
-        spouseOf: $stateParams.card,
-        childOf: $stateParams.card,
+        spouseOf: relationSelected,
+        childOf: relationSelected
       });
 
       $scope.newCardName = "";
@@ -36,6 +36,17 @@
           return null;
         }
       }
+
+      function relationSelected() {
+        if ($('.addSpouseLink').click(function() {
+            spouseOf = $stateParams.card;
+            childOf = null;
+          }));
+        if ($('.addChildLink').click(function() {
+            spouseOf = null;
+            childOf = $stateParams.card;
+          }));
+      };
 
     }; //End of Submit Card function
 
