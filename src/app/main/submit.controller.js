@@ -6,8 +6,13 @@
 
   /** @ngInject */
   function SubmitController($scope, $firebaseArray, FIREBASE_URL, $firebaseObject, $stateParams, $http) {
+
     var ref = new Firebase(FIREBASE_URL);
-    $scope.cards = $firebaseArray(ref);
+
+    var authData = ref.getAuth();
+    var cardsRef = ref.child(authData.uid + '/cards');
+
+    $scope.cards = $firebaseArray(cardsRef);
 
     $scope.submitCard = function() {
       $scope.cards.$add({
