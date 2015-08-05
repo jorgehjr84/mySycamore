@@ -26,5 +26,9 @@
       });
     };
 
+    $scope.logout = function() {
+      ref.unauth();
+    };
+
   }
 })();

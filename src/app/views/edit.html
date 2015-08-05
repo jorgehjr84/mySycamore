@@ -1,8 +1,14 @@
 <div class="input-group submit-form row">
-  <div class="col-md-6 col col-md-offset-4">
+  <div class="col-lg-10 col-lg-offset-1">
+    <a href="#/tree" class=" col-md-offset-1">mySycamore</a>
+    <a href="#/submit/:card" class=" col-md-offset-4">Add Relative</a>
 
-    <h1>EDIT PAGE</h1>
-    <div class="input-group submit-form row">
+    <a ui-sref="edit({card: id})" class="col-md-offset-4">EditTree</a>
+  </div>
+  <div class="col-lg-6 col col-lg-offset-3">
+    <br>
+    <br>
+    <div class="input-group submit-form row ">
       <form ng-submit="editCard()">
         <div ng-repeat="card in editCard">
           <input type="text" class="form-control" placeholder="Name" ng-model="card.name" ng-change="editCard.$save(card)">

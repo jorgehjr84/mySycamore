@@ -1,11 +1,13 @@
 <div id="tree-view" class="container" ng-controller="TreeController">
+  <a href="#/tree" class=" col-md-offset-1">mySycamore</a>
+  <a href="#/submit/:card" class=" col-md-offset-4">Add Relative</a>
 
+  <a ui-sref="edit({card: id})" class="col-md-offset-4">EditTree</a>
 
+  <br>
+  <br>
 
   <div class="center_content ">
-
-
-
 
     <!-- Beginning of Card -->
     <div class="btn-group " dropdown ng-repeat="(id, card) in cards">

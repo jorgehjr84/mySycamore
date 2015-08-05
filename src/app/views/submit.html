@@ -1,4 +1,14 @@
 <div ng-controller="SubmitController">
+
+  <div class="col-lg-12">
+    <a href="#/tree" class=" col-md-offset-1">mySycamore</a>
+    <a href="#/submit/:card" class=" col-md-offset-4">Add Relative</a>
+
+    <a ui-sref="edit({card: id})" class="col-md-offset-4">EditTree</a>
+  </div>
+
+  <br>
+  <br>
   <div class="col-md-6 col col-md-offset-3">
     <div class="input-group submit-form row">
       <form action="#/tree" ng-submit="submitCard()">
