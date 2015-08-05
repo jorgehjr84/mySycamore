@@ -10,6 +10,7 @@
 
     var newUser = true;
     var ref = new Firebase(FIREBASE_URL);
+    var authData = ref.getAuth();
 
     $scope.login = function() {
 
@@ -25,6 +26,14 @@
 
       });
     };
+    ref.onAuth(function() {
+      if (authData && newUser) {
+        ref.child("users").child(authData.uid).set({
+          provider: authData.provider,
+          name: authData.facebook.displayName
+        });
+      }
+    });
 
     $scope.logout = function() {
       ref.unauth();
