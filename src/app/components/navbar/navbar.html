@@ -2,13 +2,12 @@
 <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 <div id="navbar">
   <nav class="navbar">
-    <h3 class="welcome_message">Welcome to mySycamore</h3>
-    <a href="#/tree" class=" col-md-offset-1">mySycamore</a>
-    <a href="#/submit" class=" col-md-offset-4">Add Relative</a>
+    <div class="col-lg-12">
+      <h3 class="welcome_message col-lg-10 col-lg-offset-1">Welcome to mySycamore</h3>
+      <a href="#/" ng-click="logout()" class="">logout</a>
+    </div>
 
-    <a ui-sref="edit({card: id})" class="col-md-offset-4">
-              EditTree
-          </a>
+
 
   </nav>
 </div>

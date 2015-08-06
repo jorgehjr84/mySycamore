@@ -1,45 +1,38 @@
 <div id="tree-view" class="container" ng-controller="TreeController">
+  <a href="#/tree" class=" col-md-offset-1">mySycamore</a>
+  <a href="#/submit/:card" class=" col-md-offset-4">Add Relative</a>
 
+  <a ui-sref="edit({card: id})" class="col-md-offset-4">EditTree</a>
 
+  <br>
+  <br>
 
-  <div class="center_content">
+  <div class="center_content ">
 
-
-    <div class="position_grandParent">
-
-
-      <!-- Beginning of Card -->
-      <ul ui-sortable="sortableOptions" ng-model="cards">
-        <li class="btn-group tree_cards " dropdown ng-repeat="(id, card) in cards">
-          <a class="btn btn-lg btn-success ">
-          {{card.name}}
+    <!-- Beginning of Card -->
+    <div class="btn-group " dropdown ng-repeat="(id, card) in cards">
+      <a class="btn btn-lg btn-success tree_cards" ui-sref="cardDetail({card: id})">
+         {{card.name}}
+     </a>
+      <!-- End of Card -->
+      <!-- Beginning of Dropdown Button -->
+      <a href="" type="button" class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown" dropdown-toggle>
+        <span class="caret"></span>
+        <span class="sr-only"></span>
       </a>
-          <!-- ui-sref="cardDetail({card: id})" -->
-          <!-- End of Card -->
-          <!-- Beginning of Dropdown Button -->
-          <a href="" type="button" class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown" dropdown-toggle>
-            <span class="caret"></span>
-            <span class="sr-only"></span>
-          </a>
-        </li>
+      <ul class="dropdown-menu">
+        <li><a href="#/submit/:card">Parent</a></li>
+        <li><a href="#/submit/:card">Sibling</a></li>
+        <li id="addSpouseLink"><a ui-sref="submit({card: id})">Spouse</a></li>
+        <li id="addChildLink"><a ui-sref="submit({card: id})">Child</a></li>
       </ul>
-      Grand Parent DIV</div>
-    <!-- <ul class="dropdown-menu">
-      <li><a href="" ng-click="toggle_grandParent = !toggle_grandParent">Grand Parent</a></li>
-      <li><a href="" ng-click="toggle_parent = !toggle_parent">Parent</a></li>
-      <li><a href="" ng-click="toggle_sibling = !toggle_sibling">Sibling</a></li>
-      <li><a href="" ng-click="toggle_spouse = !toggle_spouse">Spouse</a></li>
-      <li><a href="" ng-click="toggle_child = !toggle_child">Child</a></li>
-      <li role="separator" class="divider"></li>
-      <li><a href="" ng-click="deleteCard(id)">Delete</a></li>
-    </ul> -->
-    <!-- End of Dropdown Menu -->
+      <!-- End of Dropdown Menu -->
+
+    </div>
+    <!-- End of card and dropdown -->
 
   </div>
-  <!-- End of card and dropdown -->
-
-</div>
-<!--End of Center Content -->
+  <!--End of Center Content -->
 
 
 </div>
