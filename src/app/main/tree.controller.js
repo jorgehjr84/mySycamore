@@ -8,11 +8,11 @@
   /** @ngInject */
   function TreeController($scope, $http, $firebaseArray, FIREBASE_URL, $stateParams, $firebaseObject) {
 
-    //
-    // var cardsRef = new Firebase(FIREBASE_URL);
-    // $scope.cards = $firebaseArray(cardsRef);
 
-    $http.get(FIREBASE_URL + '.json').success(function(data) {
+    var ref = new Firebase(FIREBASE_URL);
+    var authData = ref.getAuth();
+
+    $http.get(FIREBASE_URL + authData.uid + '/cards' + '.json').success(function(data) {
       $scope.cards = data;
     });
 
