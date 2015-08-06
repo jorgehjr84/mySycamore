@@ -5,9 +5,9 @@
   .controller('SubmitController', SubmitController);
 
   /** @ngInject */
-  function SubmitController($scope, $firebaseArray, FIREBASE_URL, $firebaseObject, $stateParams, $http) {
+  function SubmitController($scope, $firebaseArray, FIREBASE_URL, $firebaseObject, $stateParams) {
 
-    var ref = new Firebase(FIREBASE_URL);
+    var ref = new Firebase(FIREBASE_URL + '/users');
 
     var authData = ref.getAuth();
     var cardsRef = ref.child(authData.uid + '/cards');
@@ -42,11 +42,11 @@
         }
       }
 
-      function relationSelected() {
-        $('#addSpouseLink').click(function() {
-          alert('Clicked Spouse');
-        });
-      };
+      // function relationSelected() {
+      //   $('#addSpouseLink').click(function() {
+      //     alert('Clicked Spouse');
+      //   });
+      // }
 
     }; //End of Submit Card function
 

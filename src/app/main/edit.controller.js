@@ -18,7 +18,7 @@
 
 
 
-    console.log($scope.list);
+    // console.log($scope.list);
 
 
   } //End of Edit Controller

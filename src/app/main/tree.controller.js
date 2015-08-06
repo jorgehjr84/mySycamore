@@ -6,13 +6,13 @@
 
 
   /** @ngInject */
-  function TreeController($scope, $http, $firebaseArray, FIREBASE_URL, $stateParams, $firebaseObject) {
+  function TreeController($scope, $http, $firebaseArray, FIREBASE_URL) {
 
 
     var ref = new Firebase(FIREBASE_URL);
     var authData = ref.getAuth();
 
-    $http.get(FIREBASE_URL + authData.uid + '/cards' + '.json').success(function(data) {
+    $http.get(FIREBASE_URL + 'users/' + authData.uid + '/cards' + '.json').success(function(data) {
       $scope.cards = data;
     });
 
@@ -27,19 +27,6 @@
     // $scope.deleteCard = function(id) {
     //   $http.delete('https://mysycamore.firebaseio.com/cards/' + id + '.json');
     // };
-
-
-    $scope.sortableOptions = {
-      update: function(e, ui) {
-
-      },
-      containment: "parent",
-      cursor: "move",
-
-      axis: 'x'
-    };
-
-
 
 
   } //End of TreeController Function
