@@ -10,7 +10,7 @@
     <br>
     <div class="input-group submit-form row ">
       <form ng-submit="editCard()">
-        <div ng-repeat="card in card">
+        <div ng-repeat="card in editCard">
           <input type="text" class="form-control" placeholder="Name" ng-model="card.name" ng-change="editCard.$save(card)">
           <input type="text" class="form-control" placeholder="Est." ng-model="card.est" ng-change="editCard.$save(card)">
           <input type="text" class="form-control" placeholder="BirthPlace" ng-model="card.birthplace" ng-change="editCard.$save(card)">

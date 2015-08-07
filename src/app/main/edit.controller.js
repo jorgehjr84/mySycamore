@@ -6,9 +6,9 @@
 
   /** @ngInject */
   function editController($scope, FIREBASE_URL, $firebaseObject, $stateParams, $http, $firebaseArray) {
-    var ref = new Firebase(FIREBASE_URL);
+    var ref = new Firebase(FIREBASE_URL + '/users');
     var authData = ref.getAuth();
-    var editView = ref
+    var cardsRef = ref.child(authData.uid + '/cards');
 
     //$scope.result = $firebaseObject(cards.child($stateParams.card));
     $http.get(FIREBASE_URL + 'users/' + authData.uid + '/cards/' + $stateParams.card + '.json')
@@ -17,7 +17,8 @@
         console.log(response.data);
       });
 
-    $scope.editCard = $firebaseArray(ref);
+    $scope.editCard = $firebaseArray(cardsRef);
+
 
 
 
