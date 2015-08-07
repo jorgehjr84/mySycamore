@@ -7,7 +7,7 @@
   <br>
   <br>
 
-  <div class="center_content ">
+  <div class="center_content">
 
     <!-- Beginning of Card -->
     <div class="btn-group " dropdown ng-repeat="(id, card) in cards">
@@ -16,16 +16,16 @@
      </a>
       <!-- End of Card -->
       <!-- Beginning of Dropdown Button -->
-      <a href="" type="button" class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown" dropdown-toggle>
-        <span class="caret"></span>
-        <span class="sr-only"></span>
-      </a>
-      <ul class="dropdown-menu">
-        <li><a href="#/submit/:card">Parent</a></li>
-        <li><a href="#/submit/:card">Sibling</a></li>
-        <li id="addSpouseLink"><a ui-sref="submit({card: id})">Spouse</a></li>
-        <li id="addChildLink"><a ui-sref="submit({card: id})">Child</a></li>
-      </ul>
+      <!--   <a href="" type="button" class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown" dropdown-toggle>
+      <span class="caret"></span>
+      <span class="sr-only"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#/submit/:card">Parent</a></li>
+      <li><a href="#/submit/:card">Sibling</a></li>
+      <li id="addSpouseLink"><a ui-sref="submit({card: id})">Spouse</a></li>
+      <li id="addChildLink"><a ui-sref="submit({card: id})">Child</a></li>
+    </ul> -->
       <!-- End of Dropdown Menu -->
 
     </div>
