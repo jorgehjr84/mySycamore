@@ -35,10 +35,11 @@
         controllerAs: 'detail'
       })
       .state('edit', {
-        url: '/edit/cards/:id',
+        url: '/edit/cards/:card',
         templateUrl: 'app/views/edit.html',
         controller: 'editController',
         controllerAs: 'edit'
+
       });
   } //End of routeConfig
 

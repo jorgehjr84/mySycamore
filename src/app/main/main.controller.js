@@ -28,7 +28,7 @@
     };
     ref.onAuth(function() {
       if (authData && newUser) {
-        ref.child("users").child(authData.uid).set({
+        ref.child("users").child(authData.uid).update({
           provider: authData.provider,
           name: authData.facebook.displayName
         });
