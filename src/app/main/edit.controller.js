@@ -8,6 +8,8 @@
   function editController($scope, FIREBASE_URL, $firebaseObject, $stateParams, $http, $firebaseArray) {
     var ref = new Firebase(FIREBASE_URL);
     var authData = ref.getAuth();
+    var editView = ref
+
     //$scope.result = $firebaseObject(cards.child($stateParams.card));
     $http.get(FIREBASE_URL + 'users/' + authData.uid + '/cards/' + $stateParams.card + '.json')
       .then(function(response) {
