@@ -6,8 +6,13 @@
 
   /** @ngInject */
   function SubmitController($scope, $firebaseArray, FIREBASE_URL, $firebaseObject, $stateParams) {
-    var ref = new Firebase(FIREBASE_URL);
-    $scope.cards = $firebaseArray(ref);
+
+    var ref = new Firebase(FIREBASE_URL + '/users');
+
+    var authData = ref.getAuth();
+    var cardsRef = ref.child(authData.uid + '/cards');
+
+    $scope.cards = $firebaseArray(cardsRef);
 
     $scope.submitCard = function() {
       $scope.cards.$add({
@@ -17,9 +22,11 @@
         bio: emptyValue($scope.newCardBio),
         phone: emptyValue($scope.newCardPhone),
         email: emptyValue($scope.newCardEmail),
-        photo: emptyValue($scope.newCardPhoto)
-
+        photo: emptyValue($scope.newCardPhoto),
+        spouseOf: $stateParams.card,
+        childOf: $stateParams.card
       });
+
       $scope.newCardName = "";
       $scope.newCardEst = "";
       $scope.newCardBirthplace = "";
@@ -34,17 +41,24 @@
           return null;
         }
       }
+
+      // function relationSelected() {
+      //   $('#addSpouseLink').click(function() {
+      //     alert('Clicked Spouse');
+      //   });
+      // }
+
     }; //End of Submit Card function
 
-    //$scope.cardDetails = $firebaseObject(ref.child($stateParams.cards));
-    //console.log($scope.cardDetails);
-
-    // $scope.change = function(card, nodeName) {
-    //   if (!angular.isDefined(card[nodeName])) {
-    //     card[nodeName] = null;
-    //   }
+    // function spouseOf() {
+    //   $http.get('https://mysycamore.firebaseio.com/cards/' + $stateParams.relationCard + '.json')
+    //     .then(function(response) {
+    //       $scope.relationCard = response.data;
+    //       console.log(response.data);
+    //     });
     // }
-    //
+
+
     // // $scope.deleteCard = function(index) {
     // //   $scope.cards.$remove(index, 1);
     // // };

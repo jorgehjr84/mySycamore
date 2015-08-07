@@ -22,7 +22,7 @@
         controllerAs: 'tree'
       })
       .state('submit', {
-        url: '/submit',
+        url: '/submit/:card',
         templateUrl: 'app/views/submit.html',
         controller: 'SubmitController',
         controllerAs: 'submit'
@@ -39,6 +39,7 @@
         templateUrl: 'app/views/edit.html',
         controller: 'editController',
         controllerAs: 'edit'
+
       });
   } //End of routeConfig
 

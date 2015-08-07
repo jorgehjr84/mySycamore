@@ -6,34 +6,38 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
-    var vm = this;
+  function MainController($firebase, FIREBASE_URL, $scope) {
 
-    vm.awesomeThings = [];
-    vm.classAnimation = '';
-    vm.creationDate = 1436308983331;
-    vm.showToastr = showToastr;
+    var newUser = true;
+    var ref = new Firebase(FIREBASE_URL);
+    var authData = ref.getAuth();
 
-    activate();
+    $scope.login = function() {
 
-    function activate() {
-      getWebDevTec();
-      $timeout(function() {
-        vm.classAnimation = 'rubberBand';
-      }, 4000);
-    }
 
-    function showToastr() {
-      toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      vm.classAnimation = '';
-    }
+      ref.authWithOAuthPopup("facebook", function(error, authData) {
+        if (error) {
+          console.log("Login Failed!", error);
+        } else {
+          console.log("Authenticated successfully with payload:", authData);
+        }
+      }, {
+        remember: 'sessionOnly'
 
-    function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
-
-      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-        awesomeThing.rank = Math.random();
       });
-    }
+    };
+    ref.onAuth(function() {
+      if (authData && newUser) {
+        ref.child("users").child(authData.uid).update({
+          provider: authData.provider,
+          name: authData.facebook.displayName
+        });
+      }
+    });
+
+    $scope.logout = function() {
+      ref.unauth();
+    };
+
   }
 })();

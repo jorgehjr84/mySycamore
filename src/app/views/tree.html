@@ -1,37 +1,38 @@
 <div id="tree-view" class="container" ng-controller="TreeController">
+  <a href="#/tree" class=" col-md-offset-1">mySycamore</a>
+  <a href="#/submit/:card" class=" col-md-offset-4">Add Relative</a>
 
+  <a ui-sref="edit({card: id})" class="col-md-offset-4">EditTree</a>
 
+  <br>
+  <br>
 
-  <div class="center_content">
-    <div id="row-3"></div>
-    <div id="row-2"></div>
-    <div id="row-1"></div>
-    <div id="row-0"></div>
+  <div class="center_content ">
 
     <!-- Beginning of Card -->
-    <div class="btn-group" dropdown ng-repeat="(id, card) in cards">
-      <a class="btn btn-lg btn-success" ui-sref="cardDetail({card: id})">
-          {{card.name}}
-      </a>
-      <button type="button" class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown" dropdown-toggle>
+    <div class="btn-group " dropdown ng-repeat="(id, card) in cards">
+      <a class="btn btn-lg btn-success tree_cards" ui-sref="cardDetail({card: id})">
+         {{card.name}}
+     </a>
+      <!-- End of Card -->
+      <!-- Beginning of Dropdown Button -->
+      <a href="" type="button" class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown" dropdown-toggle>
         <span class="caret"></span>
         <span class="sr-only"></span>
-      </button>
+      </a>
       <ul class="dropdown-menu">
-        <li><a href="#/submit">Parent</a></li>
-        <li><a href="#/submit">Sibling</a></li>
-        <li><a href="#/submit">Spouse</a></li>
-        <li><a href="#/submit">Child</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a ui-sref="edit({card: id})">
-                  Edit
-              </a>
-        </li>
-
+        <li><a href="#/submit/:card">Parent</a></li>
+        <li><a href="#/submit/:card">Sibling</a></li>
+        <li id="addSpouseLink"><a ui-sref="submit({card: id})">Spouse</a></li>
+        <li id="addChildLink"><a ui-sref="submit({card: id})">Child</a></li>
       </ul>
+      <!-- End of Dropdown Menu -->
+
     </div>
-
-    <!--End of Card -->
-
+    <!-- End of card and dropdown -->
 
   </div>
+  <!--End of Center Content -->
+
+
+</div>

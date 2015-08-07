@@ -1,16 +1,27 @@
 <div class="input-group submit-form row">
-  <div class="col-md-6 col col-md-offset-4">
+  <div class="col-lg-10 col-lg-offset-1">
+    <a href="#/tree" class=" col-md-offset-1">mySycamore</a>
+    <a href="#/submit/:card" class=" col-md-offset-4">Add Relative</a>
 
-    <h1>EDIT PAGE</h1>
-    <form ng-submit="submitCard()">
-      <input type="text" class="form-control" placeholder="Name" ng-model="card.name">
-      <input type="text" class="form-control" placeholder="Est." ng-model="card.est">
-      <input type="text" class="form-control" placeholder="BirthPlace" ng-model="card.birthplace">
-      <input type="text" class="form-control" placeholder="Bio" ng-model="card.bio">
-      <input type="text" class="form-control" placeholder="Phone Number" ng-model="card.phone">
-      <input type="text" class="form-control" placeholder="Email" ng-model="card.email">
-      <input type="submit" value="Submit Relative" id="submitButton">
-
-    </form>
+    <a ui-sref="edit({card: id})" class="col-md-offset-4">EditTree</a>
   </div>
+  <div class="col-lg-6 col col-lg-offset-3">
+    <br>
+    <br>
+    <div class="input-group submit-form row ">
+      <form ng-submit="editCard()">
+        <div ng-repeat="card in editCard">
+          <input type="text" class="form-control" placeholder="Name" ng-model="card.name" ng-change="editCard.$save(card)">
+          <input type="text" class="form-control" placeholder="Est." ng-model="card.est" ng-change="editCard.$save(card)">
+          <input type="text" class="form-control" placeholder="BirthPlace" ng-model="card.birthplace" ng-change="editCard.$save(card)">
+          <input type="text" class="form-control" placeholder="Bio" ng-model="card.bio" ng-change="editCard.$save(card)">
+          <input type="text" class="form-control" placeholder="Phone Number" ng-model="card.phone" ng-change="editCard.$save(card)">
+          <input type="text" class="form-control" placeholder="Email" ng-model="card.email" ng-change="editCard.$save(card)">
+          <button><a href="#/tree">Submit</a></button>
+          <!-- <input type="submit" value="Submit Relative" id="submitButton" onclick="#/tree"> -->
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--End of grid -->
 </div>

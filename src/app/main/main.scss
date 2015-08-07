@@ -1,7 +1,36 @@
-body{
-font-family: 'Indie Flower', cursive;
+body {
+  font-family: 'Indie Flower', cursive;
 }
 
-.center_content{
-text-align: center;
+//NavBar Styling
+#navbar {
+  #navbar_link {
+    font-size: 2em;
+  }
 }
+.main_center_content {
+  text-align: center;
+}
+
+//Tree View Styling
+#tree-view {
+  .center_content {
+    text-align: center;
+  }
+}// #END tree-view
+
+  //Detail View Styling
+  #detail_view {
+
+    #detail_jumbotron {
+      background: #fff;
+    }
+    .list_title{
+      font-size: 1em;
+      font-style: italic;
+    }
+  li {
+      font-size: 2em;
+      list-style: none;
+    }
+  } // END #detail_view
