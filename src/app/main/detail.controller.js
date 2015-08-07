@@ -12,12 +12,11 @@
     var ref = new Firebase(FIREBASE_URL);
     var authData = ref.getAuth();
 
-    $http.get(FIREBASE_URL + 'users/' + authData.uid + '/cards/' + $stateParams.id + '.json')
+    $http.get(FIREBASE_URL + 'users/' + authData.uid + '/cards/' + $stateParams.card + '.json')
       .then(function(response) {
         $scope.card = response.data;
-        console.log(response);
+        console.log(response.data);
       });
-
 
   } //End of Detail Controller
 })();

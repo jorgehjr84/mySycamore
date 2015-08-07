@@ -6,14 +6,15 @@
 
   /** @ngInject */
   function editController($scope, FIREBASE_URL, $firebaseObject, $stateParams, $http, $firebaseArray) {
-
+    var ref = new Firebase(FIREBASE_URL);
+    var authData = ref.getAuth();
     //$scope.result = $firebaseObject(cards.child($stateParams.card));
-    $http.get('https://mysycamore.firebaseio.com/cards/' + $stateParams.card + '.json')
+    $http.get(FIREBASE_URL + 'users/' + authData.uid + '/cards/' + $stateParams.id + '.json')
       .then(function(response) {
         $scope.card = response.data;
-        // console.log(response);
+        console.log(response);
       });
-    var ref = new Firebase(FIREBASE_URL);
+
     $scope.editCard = $firebaseArray(ref);
 
 

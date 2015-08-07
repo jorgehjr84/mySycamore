@@ -29,13 +29,13 @@
 
       })
       .state('cardDetail', {
-        url: '/cards/:id',
+        url: '/cards/:card',
         templateUrl: 'app/views/detail.html',
         controller: 'DetailController',
         controllerAs: 'detail'
       })
       .state('edit', {
-        url: '/edit/cards/:card',
+        url: '/edit/cards/:id',
         templateUrl: 'app/views/edit.html',
         controller: 'editController',
         controllerAs: 'edit'
