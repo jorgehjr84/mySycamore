@@ -29,7 +29,7 @@
 
       })
       .state('cardDetail', {
-        url: '/cards/:card',
+        url: '/cards/:id',
         templateUrl: 'app/views/detail.html',
         controller: 'DetailController',
         controllerAs: 'detail'
