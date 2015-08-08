@@ -13,8 +13,16 @@
     var authData = ref.getAuth();
 
     $http.get(FIREBASE_URL + 'users/' + authData.uid + '/cards' + '.json').success(function(data) {
-      $scope.cards = data;
+      $scope.parents = data;
     });
+
+    $scope.children = function() {
+      if ($scope.parents.childOf != null) {
+        return;
+      };
+    };
+    console.log($scope.children);
+
 
     // $scope.toggle = false;
     // $scope.toggle_grandParent = false;
