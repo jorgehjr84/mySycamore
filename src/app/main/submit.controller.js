@@ -23,7 +23,6 @@
         phone: emptyValue($scope.newCardPhone),
         email: emptyValue($scope.newCardEmail),
         photo: emptyValue($scope.newCardPhoto),
-        spouseOf: $stateParams.card,
         childOf: $stateParams.card
       });
 
